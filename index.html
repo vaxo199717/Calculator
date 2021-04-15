@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/307e3dac6d.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <script src="app.js" async></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- calculator display -->
+    <div class="display">
+      <h1 id="input"></h1>
+      <h2 id="output"></h2>
+    </div>
+    <!-- calculator display -->
+
+    <!-- length converter display-------------------------------->
+    <div class="length-display">
+      <div class="length-select">
+        <select class="length-select-buttons">
+          <option value="">Centimeter</option> 
+          <option value="">Millimeter</option>
+          <option value="">Meter</option>
+          <option value="">Kilometer</option>
+          <option value="">Light year</option>
+        </select>
+        <div class="length-output">234</div>
+      </div>
+      <br>
+      <div class="length-select">
+        <select class="length-select-buttons">
+          <option value="">Meter</option> 
+          <option value="">Centimeter</option>
+          <option value="">Millimeter</option>
+          <option value="">Kilometer</option>
+          <option value="">Light year</option>
+        </select>
+        <div class="length-output">127</div>
+      </div>
+    </div>
+    <!-- length converter display------------------------------------>
+
+    <!-- menu open/close buttons -->
+    <div class="moreBtns">
+      <button id="more"><i class="fas fa-grip-lines"></i></button>
+      <button id="less"><i class="fas fa-grip-lines"></i></button>
+    </div>
+    <!-- menu open/close buttons -->
+
+    <!-- menu -->
+    <div id="moreOptions">
+      <button id="calculator" class="moreBtn">Calculator</button>
+      <button id="currency" class="moreBtn">Currency</button>
+      <button id="converter" class="moreBtn">Converter</button>
+    </div>
+    <!-- menu -->
+
+    <div class="converter-container">
+      <!-- converter page -->
+      <div id="length" class="converterOption">
+        <p><i class="fas fa-ruler-horizontal"></i></p><br>
+        <p>Length</p>
+      </div>
+      <div class="converterOption">
+        <p><i class="far fa-square"></i></p><br>
+        <p>Area</p>
+      </div>
+      <div class="converterOption">
+        <p><i class="fas fa-cube"></i></p><br>
+        <p>Volume</p>
+      </div>
+      <div class="converterOption">
+        <p><i class="fas fa-tachometer-alt"></i></p><br>
+        <p>Speed</p>
+      </div>
+      <div class="converterOption">
+        <p><i class="fas fa-balance-scale"></i></p><br>
+        <p>Weight</p>
+      </div>
+      <div class="converterOption">
+        <p><i class="fas fa-temperature-high"></i></p><br>
+        <p>Degrees</p>
+      </div>
+      <div class="converterOption">
+        <p><i class="fas fa-bolt"></i></p><br>
+        <p>Power</p>
+      </div>
+      <div class="converterOption">
+        <p><i class="fas fa-stopwatch"></i></p><br>
+        <p>Pressure</p>
+      </div>
+      <!-- converter page -->
+    </div>
+
+    <!-- length converter keyboard -->
+    <div id="converter-keyboard" class="keyboard">
+      <button class="keyboardBtn conBtn" value="7">7</button>
+      <button class="keyboardBtn conBtn" value="8">8</button>
+      <button class="keyboardBtn conBtn" value="9">9</button>
+      <button class="keyboardBtn conBtn symbolBtn"><i class="fas fa-eraser"></i></button>
+      <button class="keyboardBtn conBtn" value="4">4</button>
+      <button class="keyboardBtn conBtn" value="5">5</button>
+      <button class="keyboardBtn conBtn" value="6">6</button>
+      <button disabled class="conBtn"></button>
+      <button class="keyboardBtn conBtn" value="1">1</button>
+      <button class="keyboardBtn conBtn" value="2">2</button>
+      <button class="keyboardBtn conBtn" value="3">3</button>
+      <button disabled class="conBtn"></button>
+      <button class="keyboardBtn conBtn" value="0">00</button>
+      <button class="keyboardBtn conBtn" value="0">0</button>
+      <button class="keyboardBtn conBtn" value=".">.</button>
+      <button class="keyboardBtn conBtn symbolBtn"><i class="fas fa-backspace "></i></button>
+    </div>
+    <!-- length converter keyboard -->
+
+    <!-- calculator keyboard -->
+    <div id="calculator-keyboard" class="keyboard">
+      <button class="keyboardBtn" id="calcClear"><i class="far fa-trash-alt"></i></button>
+      <button value="%" class="calcBtn keyboardBtn"><i class="fas fa-percentage"></i></button>
+      <button class="keyboardBtn" id="backspace"><i class="fas fa-backspace"></i></button>
+      <button value="/" class="symbolBtn keyboardBtn calcBtn"><i class="fas fa-divide"></i></button>
+      <button value="7" class="calcBtn keyboardBtn">7</button>
+      <button value="8" class="calcBtn keyboardBtn">8</button>
+      <button value="9" class="calcBtn keyboardBtn">9</button>
+      <button value="*" class="symbolBtn keyboardBtn calcBtn"><i class="fas fa-times"></i></button>
+      <button value="4" class="calcBtn keyboardBtn">4</button>
+      <button value="5" class="calcBtn keyboardBtn">5</button>
+      <button value="6" class="calcBtn keyboardBtn">6</button>
+      <button value="-" class="symbolBtn keyboardBtn calcBtn"><i class="fas fa-minus"></i></button>
+      <button value="1" class="calcBtn keyboardBtn">1</button>
+      <button value="2" class="calcBtn keyboardBtn">2</button>
+      <button value="3" class="calcBtn keyboardBtn">3</button>
+      <button value="+" class="symbolBtn keyboardBtn calcBtn"><i class="fas fa-plus"></i></button>
+      <button value="00" class="calcBtn keyboardBtn">00</button>
+      <button value="0" class="calcBtn keyboardBtn">0</button>
+      <button value="." class="calcBtn keyboardBtn" style="font-weight: bolder">.</button>
+      <button value="=" class="symbolBtn keyboardBtn" id="calcEqual"><i class="fas fa-equals"></i></button>
+    </div>
+    <!-- calculator keyboard -->
+
+  </div>
+</body>
+
+</html>
